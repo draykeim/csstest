@@ -11,7 +11,7 @@
     <!--1.) Basic CSS: Change the Color of Text -->
 
     <!-- Change your h2 element's style so that its text color is red. -->
-    <h2>CatPhotoApp</h2>
+    <h2 style="color:red;">CatPhotoApp</h2>
     <main>
       <p>Click here to view more <a href="#">cat photos</a>.</p>
     
@@ -45,7 +45,12 @@
 
     <!--2.) Basic CSS: Use CSS Selectors to Style Elements -->
     <!-- Delete your h2 element's style attribute, and instead create a CSS style block. Add the necessary CSS to turn all h2 elements blue. -->
-    <h2 style="color: red;">CatPhotoApp</h2>
+    <style>
+      h2 {
+        color:blue;
+      }
+    </style>
+    <h2>CatPhotoApp</h2>
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
@@ -90,7 +95,7 @@ Give your h2 element the class attribute with a value of 'red-text'. -->
     }
   </style>
   
-  <h2>CatPhotoApp</h2>
+  <h2 class="red-text">CatPhotoApp</h2>
   <main>
     <p>Click here to view more <a href="#">cat photos</a>.</p>
   
@@ -263,7 +268,7 @@ Give your h2 element the class attribute with a value of 'red-text'. -->
       <!-- 7.) Basic CSS: Import a Google Font -->
       <!-- To import a Google Font, you can copy the font's URL from the Google Fonts library and then paste it in your HTML. For this challenge, we'll import the Lobster font. To do this, copy the following code snippet and paste it into the top of your code editor (before the opening style element):
 
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"> -->
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">-->
       <!-- Import the Lobster font to your web page. Then, use an element selector to set Lobster as the font-family for your h2 element. -->
 
 
@@ -824,7 +829,7 @@ Give your h2 element the class attribute with a value of 'red-text'. -->
     .blue-box {
       background-color: blue;
       color: #fff;
-      padding: 10px;
+      padding: 20px;
     }
   </style>
   <h5 class="injected-text">margin</h5>
@@ -865,7 +870,7 @@ Give your h2 element the class attribute with a value of 'red-text'. -->
       background-color: blue;
       color: #fff;
       padding: 20px;
-      margin: 10px;
+      margin: 20px;
     }
   </style>
   <h5 class="injected-text">margin</h5>
@@ -908,7 +913,7 @@ Give your h2 element the class attribute with a value of 'red-text'. -->
     background-color: blue;
     color: #fff;
     padding: 20px;
-    margin: 20px;
+    margin: -15px;
   }
 </style>
 
@@ -950,6 +955,10 @@ Give your h2 element the class attribute with a value of 'red-text'. -->
     .blue-box {
       background-color: blue;
       color: #fff;
+      padding-top: 40px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      padding-left: 40px;
     }
   </style>
   <h5 class="injected-text">margin</h5>
@@ -991,6 +1000,10 @@ Give your h2 element the class attribute with a value of 'red-text'. -->
     .blue-box {
       background-color: blue;
       color: #fff;
+      margin-top: 40px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      margin-left: 40px;
     }
   </style>
   <h5 class="injected-text">margin</h5>
@@ -1033,6 +1046,7 @@ Give your h2 element the class attribute with a value of 'red-text'. -->
     .blue-box {
       background-color: blue;
       color: #fff;
+      padding: 40px 20px 20px 40px;
     }
   </style>
   <h5 class="injected-text">margin</h5>
@@ -1073,6 +1087,7 @@ Give your h2 element the class attribute with a value of 'red-text'. -->
     .blue-box {
       background-color: blue;
       color: #fff;
+      margin: 40px 20px 20px 40px;
     }
   </style>
   <h5 class="injected-text">margin</h5>
@@ -1113,6 +1128,9 @@ Give your h2 element the class attribute with a value of 'red-text'. -->
   
     .silver-background {
       background-color: silver;
+    }
+    [type='checkbox'] {
+      margin: 10px 0px 15px 0px;
     }
   </style>
   
@@ -1172,7 +1190,8 @@ Give your h2 element the class attribute with a value of 'red-text'. -->
     .red-box {
       background-color: red;
       margin: 20px 40px 20px 40px;
-  
+      padding: 1.5em
+   
     }
   
     .green-box {
@@ -1196,7 +1215,9 @@ body {
 } -->
 
   <style>
-
+body {
+  background-color: black;
+}
 </style>
 
 <!-- 26.) Basic CSS: Inherit Styles from the Body Element -->
@@ -1208,10 +1229,12 @@ Finally, give your body element the font-family of monospace by adding font-fami
 <style>
     body {
       background-color: black;
+      color: green;
+      font-family: monospace;
     }
   
   </style>
-
+<h1>Hello World</h1>
 
 <!-- 27.) Basic CSS: Prioritize One Style Over Another -->
 <!-- 
@@ -1224,8 +1247,11 @@ Give your h1 element the class of pink-text. -->
       font-family: monospace;
       color: green;
     }
+    .pink-text {
+      color: pink;
+    }
   </style>
-  <h1>Hello World!</h1>
+  <h1 class="pink-text">Hello World!</h1>
 
   <!-- 28.) Basic CSS: Override Styles in Subsequent CSS -->
   <!-- Create an additional CSS class called blue-text that gives an element the color blue. Make sure it's below your pink-text class declaration.
@@ -1248,8 +1274,11 @@ Give your h1 element the class of pink-text. -->
         .pink-text {
           color: pink;
         }
+        .blue-text {
+          color: blue;
+        }
       </style>
-      <h1 class="pink-text">Hello World!</h1>
+      <h1 class="pink-text blue-text">Hello World!</h1>
 
 <!-- 29.) Basic CSS: Override Class Declarations by Styling ID Attributes -->
 <!-- Give your h1 element the id attribute of orange-text. Remember, id styles look like this:
@@ -1276,8 +1305,11 @@ Note: It doesn't matter whether you declare this CSS above or below pink-text cl
     .blue-text {
       color: blue;
     }
+    #orange-text {
+      color: orange;
+    }
   </style>
-  <h1 class="pink-text blue-text">Hello World!</h1>
+  <h1 class="pink-text blue-text" id="orange-text">Hello World!</h1>
 
   <!-- 30.) Basic CSS: Override Class Declarations with Inline Styles -->
   <!-- Use an inline style to try to make our h1 element white. Remember, in line styles look like this:
@@ -1302,7 +1334,7 @@ Note: It doesn't matter whether you declare this CSS above or below pink-text cl
       color: blue;
     }
   </style>
-  <h1 id="orange-text" class="pink-text blue-text">Hello World!</h1>
+  <h1 style="color: white;" id="orange-text" class="pink-text blue-text">Hello World!</h1>
 
 <!-- 31.) Basic CSS: Override All Other Styles by using Important -->
 <!-- Let's add the keyword !important to your pink-text element's color declaration to make 100% sure that your h1 element will be pink.
@@ -1321,7 +1353,7 @@ color: red !important; -->
       color: orange;
     }
     .pink-text {
-      color: pink;
+      color: pink !important;
     }
     .blue-text {
       color: blue;
@@ -1336,7 +1368,7 @@ color: red !important; -->
 
 <style>
     body {
-      background-color: black;
+      background-color: #000000;
     }
   </style>
 
@@ -1351,16 +1383,16 @@ color: red !important; -->
 
   <style>
     .red-text {
-      color: black;
+      color: #FF0000;
     }
     .green-text {
-      color: black;
+      color: #00FF00;
     }
     .dodger-blue-text {
-      color: black;
+      color: #1E90FF;
     }
     .orange-text {
-      color: black;
+      color: #FFA500;
     }
   </style>
   
@@ -1383,16 +1415,16 @@ Red	    #F00
 Fuchsia	#F0F -->
 <style>
     .red-text {
-      color: #000000;
+      color: #F00;
     }
     .fuchsia-text {
-      color: #000000;
+      color: #f0f;
     }
     .cyan-text {
-      color: #000000;
+      color: #0ff;
     }
     .green-text {
-      color: #000000;
+      color: #0f0;
     }
   </style>
   
@@ -1410,7 +1442,7 @@ Fuchsia	#F0F -->
 
   <style>
     body {
-      background-color: #F00;
+      background-color: rgb(0, 0, 0)
     }
   </style>
 
@@ -1424,16 +1456,16 @@ Fuchsia	#F0F -->
   Sienna	rgb(160, 82, 45) -->
   <style>
     .red-text {
-      color: #000000;
+      color: rgb(255, 0, 0)
     }
     .orchid-text {
-      color: #000000;
+      color: rgb(218, 112, 214)
     }
     .sienna-text {
-      color: #000000;
+      color: rgb(160, 82, 45)
     }
     .blue-text {
-      color: #000000;
+      color: rgb(0, 0, 255)
     }
   </style>
   
@@ -1451,9 +1483,9 @@ Fuchsia	#F0F -->
     .penguin {
   
       /* Only change code below this line */
-      --penguin-skin: black;
-      --penguin-belly: gray;
-      --penguin-beak: yellow;
+      --penguin-skin: gray;
+      --penguin-belly: white;
+      --penguin-beak: orange;
       /* Only change code above this line */
   
       position: relative;
@@ -1653,7 +1685,7 @@ Fuchsia	#F0F -->
 <style>
     .penguin {
       /* Only change code below this line */
-  
+  --penguin-skin: gray;
       /* Only change code above this line */
       position: relative;
       margin: auto;
@@ -1865,7 +1897,7 @@ Fuchsia	#F0F -->
       left: 25%;
   
       /* Change code below this line */
-      background: black;
+      background: var(--penguin-skin);
       /* Change code above this line */
   
       width: 50%;
@@ -1878,7 +1910,7 @@ Fuchsia	#F0F -->
       left: 23.5%;
   
       /* Change code below this line */
-      background: black;
+      background: var(--penguin-skin);
       /* Change code above this line */
   
       width: 53%;
@@ -1891,7 +1923,7 @@ Fuchsia	#F0F -->
       left: -5%;
   
       /* Change code below this line */
-      background: black;
+      background: var(--penguin-skin);
       /* Change code above this line */
   
       width: 30%;
@@ -1906,7 +1938,7 @@ Fuchsia	#F0F -->
       left: 75%;
   
       /* Change code below this line */
-      background: black;
+      background: var(--penguin-skin);
       /* Change code above this line */
   
       width: 30%;
@@ -2085,7 +2117,7 @@ Fuchsia	#F0F -->
       left: 25%;
   
       /* Change code below this line */
-      background: var(--pengiun-skin);
+      background: var(--pengiun-skin, black);
       /* Change code above this line */
   
       width: 50%;
@@ -2098,7 +2130,7 @@ Fuchsia	#F0F -->
       left: 23.5%;
   
       /* Change code below this line */
-      background: var(--pengiun-skin);
+      background: var(--pengiun-skin, black);
       /* Change code above this line */
   
       width: 53%;
@@ -2279,7 +2311,7 @@ Fuchsia	#F0F -->
       --red-color: red;
     }
     .red-box {
-  
+      background: red;
       background: var(--red-color);
       height: 200px;
       width:200px;
@@ -2292,7 +2324,7 @@ Fuchsia	#F0F -->
   <style>
     :root {
       /* Only change code below this line */
-  
+  --penguin-belly: pink;
       /* Only change code above this line */
     }
   
@@ -2507,7 +2539,7 @@ Fuchsia	#F0F -->
   
     .penguin {
       /* Only change code below this line */
-  
+  --penguin-belly: white;
       /* Only change code above this line */
       position: relative;
       margin: auto;
@@ -2710,7 +2742,8 @@ Fuchsia	#F0F -->
     @media (max-width: 350px) {
       :root {
         /* Only change code below this line */
-  
+       --penguin-size:200px;
+       --penguin-skin: black;
         /* Only change code above this line */
       }
     }
